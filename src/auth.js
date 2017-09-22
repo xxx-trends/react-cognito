@@ -1,8 +1,9 @@
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
-import { CognitoIdentityCredentials } from 'aws-sdk';
 import { Action } from './actions';
 import { getUserAttributes, mkAttrList, sendAttributeVerificationCode } from './attributes';
 import { buildLogins, getGroups } from './utils';
+
+const CognitoIdentityCredentials = require('aws-sdk/lib/credentials/cognito_identity_credentials');
 
 /**
  * sends the email verification code and transitions to the correct state
@@ -49,10 +50,11 @@ const refreshIdentityCredentials = (username, jwtToken, config) =>
  * pool using a token from the session
  * @param {object} user - the CognitoUser object
  * @param {object} config -the react-cognito config
+ * @param group
  * @return {Promise<object>} an action to be dispatched
 */
 const performLogin = (user, config, group) =>
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     if (user === null) {
       resolve(Action.logout());
     } else {
