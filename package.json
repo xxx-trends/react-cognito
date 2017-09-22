@@ -1,9 +1,9 @@
 {
   "name": "@xxx-trends/react-cognito",
   "scope": "winjer",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Use Amazon Cognito with React and Redux",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/xxx-trends/react-cognito.git"
@@ -22,6 +22,7 @@
     "mocha": "--require scripts/mocha_runner test/*.js"
   },
   "scripts": {
+    "build": "babel src --out-dir lib",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
     "testonly": "PWD=$(pwd) NODE_ENV=test mocha $npm_package_options_mocha || true",
