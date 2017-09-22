@@ -8,9 +8,9 @@ export * from './attributes';
 export * from './policy';
 
 
-export * from './Login.jsx';
-export * from './Logout.jsx';
-export * from './NewPasswordRequired.jsx';
-export * from './EmailVerification.jsx';
-export * from './PasswordReset.jsx';
-export * from './Confirm.jsx';
+export * from './Login.js';
+export * from './Logout.js';
+export * from './NewPasswordRequired.js';
+export * from './EmailVerification.js';
+export * from './PasswordReset.js';
+export * from './Confirm.js';

@@ -1,4 +1,4 @@
-import { util as AWSutil } from 'aws-sdk/global';
+const AWSutil = require('aws-sdk/lib/util');
 
 /**
  * Change a user's password

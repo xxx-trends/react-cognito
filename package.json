@@ -1,9 +1,9 @@
 {
   "name": "@xxx-trends/react-cognito",
   "scope": "winjer",
-  "version": "1.5.6",
+  "version": "1.5.8",
   "description": "Use Amazon Cognito with React and Redux",
-  "main": "lib/index.js",
+  "main": "dist/react-cognito.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/xxx-trends/react-cognito.git"
@@ -31,7 +31,7 @@
     "test-watch": "npm run testonly -- --watch --watch-extensions js",
     "examples": "[ -d examples/htdocs/dist ] || mkdir examples/htdocs/dist; babel --plugins transform-es2015-modules-umd src --ignore __tests__ examples/src --out-file examples/htdocs/dist/bundle.js",
     "doc": "esdoc",
-    "prepublish": "yarn build"
+    "prepublish": "webpack -d; webpack -p"
   },
   "devDependencies": {
     "amazon-cognito-identity-js": "1.19.0",
