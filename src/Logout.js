@@ -16,7 +16,7 @@ export class Logout extends React.Component {
    * If you want to take further actions (like reloading UI) then add an
    * onLogout property to the Logout element
    */
-  onClick = (event) => {
+  onClick(event) {
     const { store } = this.context;
     const state = store.getState();
     state.cognito.user.signOut();
