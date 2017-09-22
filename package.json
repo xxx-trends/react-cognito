@@ -1,9 +1,9 @@
 {
   "name": "@xxx-trends/react-cognito",
   "scope": "winjer",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "Use Amazon Cognito with React and Redux",
-  "main": "dist/react-cognito.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/xxx-trends/react-cognito.git"
